@@ -541,3 +541,197 @@ a {
     font-size: 0.76rem;
     white-space: nowrap;
 }
+
+/* ---------- Find / Offer product sections ---------- */
+
+.journey-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(360px, 0.8fr);
+    align-items: center;
+    gap: 90px;
+}
+
+.journey-grid-reverse .journey-copy {
+    order: 2;
+}
+
+.journey-grid-reverse .journey-demo {
+    order: 1;
+}
+
+.journey-intro {
+    max-width: 620px;
+    margin: 24px 0 0;
+    color: #64717b;
+    font-size: 1.1rem;
+}
+
+.feature-list {
+    display: grid;
+    gap: 0;
+    margin-top: 42px;
+}
+
+.feature-item {
+    display: grid;
+    grid-template-columns: 42px 1fr;
+    gap: 16px;
+    padding: 20px 0;
+    border-top: 1px solid #dfe8e8;
+}
+
+.feature-item:last-child {
+    border-bottom: 1px solid #dfe8e8;
+}
+
+.feature-item > span {
+    color: #167c80;
+    font-size: 0.82rem;
+    font-weight: 800;
+}
+
+.feature-item strong {
+    display: block;
+    margin-bottom: 4px;
+    font-size: 1.05rem;
+}
+
+.feature-item p {
+    margin: 0;
+    color: #6b777f;
+}
+
+
+/* ---------- Mini product demos ---------- */
+
+.journey-demo {
+    padding: 34px;
+    border: 1px solid #dce8e7;
+    border-radius: 26px;
+    background: #ffffff;
+    box-shadow: 0 22px 55px rgba(28, 75, 75, 0.08);
+}
+
+.demo-label {
+    margin: 0 0 28px;
+    color: #167c80;
+    font-size: 0.82rem;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.demo-field {
+    padding: 17px 18px;
+    border: 1px solid #dfe7e8;
+    border-radius: 14px;
+    background: #fbfdfd;
+}
+
+.demo-field small,
+.demo-options small,
+.demo-result small {
+    display: block;
+    color: #78848b;
+}
+
+.demo-field strong,
+.demo-options strong,
+.demo-result strong {
+    display: block;
+    margin-top: 3px;
+}
+
+.demo-route {
+    width: 3px;
+    height: 30px;
+    margin-left: 30px;
+    background: #9fd8d5;
+}
+
+.demo-result {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    margin-top: 24px;
+    padding: 17px 18px;
+    border-radius: 14px;
+    background: #eaf7f5;
+}
+
+.demo-dot {
+    width: 13px;
+    height: 13px;
+    flex: 0 0 13px;
+    border-radius: 50%;
+    background: #167c80;
+    box-shadow: 0 0 0 5px rgba(22, 124, 128, 0.12);
+}
+
+.demo-options {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-top: 14px;
+}
+
+.demo-options > div {
+    padding: 17px 18px;
+    border: 1px solid #dfe7e8;
+    border-radius: 14px;
+    background: #fbfdfd;
+}
+
+.demo-ready {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 24px;
+    padding: 17px 18px;
+    border-radius: 14px;
+    color: #116a6d;
+    background: #eaf7f5;
+    font-weight: 700;
+}
+
+.demo-ready span {
+    display: grid;
+    width: 25px;
+    height: 25px;
+    place-items: center;
+    border-radius: 50%;
+    color: #ffffff;
+    background: #167c80;
+}
+
+
+/* ---------- Find / Offer responsive ---------- */
+
+@media (max-width: 850px) {
+
+    .journey-grid {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    .journey-grid-reverse .journey-copy,
+    .journey-grid-reverse .journey-demo {
+        order: initial;
+    }
+
+    .journey-demo {
+        max-width: 600px;
+    }
+}
+
+@media (max-width: 560px) {
+
+    .journey-demo {
+        padding: 22px;
+        border-radius: 20px;
+    }
+
+    .demo-options {
+        grid-template-columns: 1fr;
+    }
+}
