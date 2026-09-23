@@ -1,0 +1,543 @@
+/* ---------- Base ---------- */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Inter, Arial, sans-serif;
+    color: #17202a;
+    background: #ffffff;
+    line-height: 1.6;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.container {
+    width: min(1120px, calc(100% - 40px));
+    margin: 0 auto;
+}
+
+
+/* ---------- Header ---------- */
+
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: rgba(255, 255, 255, 0.94);
+    border-bottom: 1px solid #e8ecef;
+    backdrop-filter: blur(12px);
+}
+
+.header-inner {
+    min-height: 72px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+}
+
+.brand {
+    font-size: 1.8rem;
+    font-weight: 800;
+    letter-spacing: -0.06em;
+    color: #167c80;
+}
+
+.main-nav {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    font-size: 0.95rem;
+    font-weight: 600;
+}
+
+.main-nav a:hover {
+    color: #167c80;
+}
+
+
+/* ---------- Hero ---------- */
+
+.hero {
+    min-height: 680px;
+    display: flex;
+    align-items: center;
+    background:
+        radial-gradient(circle at 80% 20%, #d8f4ef 0, transparent 32%),
+        linear-gradient(135deg, #f4fbfa 0%, #ffffff 60%);
+}
+
+.hero-content {
+    padding-top: 90px;
+    padding-bottom: 90px;
+}
+
+.eyebrow,
+.section-label {
+    margin: 0 0 14px;
+    color: #167c80;
+    font-size: 0.82rem;
+    font-weight: 800;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+.hero h1 {
+    max-width: 780px;
+    margin: 0;
+    font-size: clamp(3.5rem, 8vw, 6.8rem);
+    line-height: 0.96;
+    letter-spacing: -0.065em;
+}
+
+.hero-text {
+    max-width: 650px;
+    margin: 30px 0 0;
+    font-size: 1.25rem;
+    color: #53606b;
+}
+
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-top: 38px;
+}
+
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 52px;
+    padding: 0 24px;
+    border-radius: 12px;
+    font-weight: 700;
+    transition: transform 0.15s ease;
+}
+
+.button:hover {
+    transform: translateY(-2px);
+}
+
+.button-primary {
+    color: #ffffff;
+    background: #167c80;
+}
+
+.button-secondary {
+    color: #167c80;
+    background: #ffffff;
+    border: 1px solid #b8d9d7;
+}
+
+.contribution-note {
+    margin-top: 26px;
+    color: #68747d;
+    font-size: 0.9rem;
+}
+
+
+/* ---------- General sections ---------- */
+
+.section {
+    padding: 110px 0;
+}
+
+.section h2 {
+    max-width: 720px;
+    margin: 0;
+    font-size: clamp(2.3rem, 5vw, 4rem);
+    line-height: 1.05;
+    letter-spacing: -0.045em;
+}
+
+.steps {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-top: 58px;
+}
+
+.step {
+    padding: 32px;
+    border: 1px solid #e3e9eb;
+    border-radius: 20px;
+    background: #ffffff;
+}
+
+.step span {
+    display: block;
+    margin-bottom: 45px;
+    color: #167c80;
+    font-weight: 800;
+}
+
+.step h3 {
+    margin: 0 0 10px;
+    font-size: 1.3rem;
+}
+
+.step p {
+    margin: 0;
+    color: #64717b;
+}
+
+
+/* ---------- Rider / driver sections ---------- */
+
+.journey-section {
+    border-top: 1px solid #e8ecef;
+}
+
+.journey-section:nth-of-type(even) {
+    background: #f5faf9;
+}
+
+.journey-section .container > p:last-child {
+    max-width: 620px;
+    margin: 22px 0 0;
+    color: #64717b;
+    font-size: 1.1rem;
+}
+
+
+/* ---------- Footer ---------- */
+
+.site-footer {
+    padding: 50px 0;
+    color: #dce7e7;
+    background: #102c2d;
+}
+
+.site-footer strong {
+    font-size: 1.5rem;
+    color: #ffffff;
+}
+
+.site-footer p {
+    margin: 5px 0 0;
+}
+
+
+/* ---------- Mobile ---------- */
+
+@media (max-width: 720px) {
+
+    .header-inner {
+        min-height: 64px;
+    }
+
+    .main-nav {
+        display: none;
+    }
+
+    .hero {
+        min-height: auto;
+    }
+
+    .hero-content {
+        padding-top: 90px;
+        padding-bottom: 90px;
+    }
+
+    .hero h1 {
+        font-size: clamp(3.3rem, 16vw, 5rem);
+    }
+
+    .hero-text {
+        font-size: 1.08rem;
+    }
+
+    .hero-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .section {
+        padding: 80px 0;
+    }
+
+    .steps {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ---------- Hero route visual ---------- */
+
+.hero-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(420px, 0.9fr);
+    align-items: center;
+    gap: 70px;
+}
+
+.route-visual {
+    position: relative;
+    min-height: 440px;
+    border: 1px solid #dcebea;
+    border-radius: 32px;
+    overflow: hidden;
+    background:
+        radial-gradient(circle at 20% 25%, #d9f3ee 0 5%, transparent 6%),
+        radial-gradient(circle at 80% 70%, #d9f3ee 0 7%, transparent 8%),
+        linear-gradient(135deg, #f8fcfb, #edf8f6);
+}
+
+.route-visual::before,
+.route-visual::after {
+    content: "";
+    position: absolute;
+    width: 150%;
+    height: 1px;
+    background: #dce9e7;
+    transform: rotate(-18deg);
+}
+
+.route-visual::before {
+    top: 28%;
+    left: -20%;
+}
+
+.route-visual::after {
+    top: 72%;
+    left: -20%;
+}
+
+.route-card,
+.destination {
+    position: absolute;
+    z-index: 4;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 13px 16px;
+    border: 1px solid #dce8e7;
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.96);
+    box-shadow: 0 10px 30px rgba(26, 65, 65, 0.08);
+}
+
+.route-card strong,
+.destination strong {
+    display: block;
+    line-height: 1.2;
+}
+
+.route-card small,
+.destination small {
+    display: block;
+    margin-top: 3px;
+    color: #748087;
+}
+
+.route-icon {
+    display: grid;
+    width: 38px;
+    height: 38px;
+    place-items: center;
+    flex: 0 0 38px;
+    border-radius: 50%;
+    color: #ffffff;
+    background: #167c80;
+    font-weight: 800;
+}
+
+.driver-card {
+    top: 45px;
+    left: 38px;
+}
+
+.rider-card {
+    bottom: 42px;
+    left: 38px;
+}
+
+.destination {
+    top: 50%;
+    right: 24px;
+    transform: translateY(-50%);
+}
+
+.destination-pin {
+    width: 20px;
+    height: 20px;
+    flex: 0 0 20px;
+    border: 5px solid #167c80;
+    border-radius: 50% 50% 50% 0;
+    transform: rotate(-45deg);
+}
+
+.route-line {
+    position: absolute;
+    z-index: 2;
+    height: 8px;
+    border-radius: 999px;
+    background: #20a3a0;
+    transform-origin: left center;
+}
+
+.driver-line {
+    top: 150px;
+    left: 112px;
+    width: 210px;
+    transform: rotate(28deg);
+}
+
+.rider-line {
+    bottom: 135px;
+    left: 112px;
+    width: 215px;
+    transform: rotate(-27deg);
+}
+
+.shared-line {
+    top: 218px;
+    left: 300px;
+    width: 210px;
+    background: #167c80;
+    transform: rotate(0deg);
+}
+
+.route-point {
+    position: absolute;
+    z-index: 3;
+    width: 18px;
+    height: 18px;
+    border: 5px solid #ffffff;
+    border-radius: 50%;
+    background: #20a3a0;
+    box-shadow: 0 0 0 2px #20a3a0;
+}
+
+.driver-point {
+    top: 140px;
+    left: 102px;
+}
+
+.rider-point {
+    bottom: 125px;
+    left: 102px;
+}
+
+.merge-point {
+    position: absolute;
+    z-index: 5;
+    top: 205px;
+    left: 287px;
+    width: 34px;
+    height: 34px;
+    padding: 5px;
+    border-radius: 50%;
+    background: #ffffff;
+    box-shadow: 0 5px 20px rgba(22, 124, 128, 0.18);
+}
+
+.merge-point span {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: #167c80;
+}
+
+.shared-label {
+    position: absolute;
+    z-index: 5;
+    top: 158px;
+    left: 270px;
+    padding: 8px 13px;
+    border-radius: 10px;
+    color: #ffffff;
+    background: #167c80;
+    font-size: 0.82rem;
+    font-weight: 700;
+}
+
+
+/* Route visual on smaller screens */
+
+@media (max-width: 950px) {
+
+    .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding-top: 70px;
+        padding-bottom: 70px;
+    }
+
+    .hero-content {
+        padding-top: 20px;
+        padding-bottom: 30px;
+    }
+
+    .route-visual {
+        width: 100%;
+        max-width: 620px;
+        min-height: 400px;
+    }
+}
+
+@media (max-width: 560px) {
+
+    .route-visual {
+        display: none;
+    }
+}
+
+/* ---------- Route visual alignment polish ---------- */
+
+.merge-point {
+    top: 205px;
+    left: 300px;
+}
+
+.shared-line {
+    top: 218px;
+    left: 320px;
+    width: 120px;
+}
+
+.shared-label {
+    top: 162px;
+    left: 325px;
+    white-space: nowrap;
+}
+
+.destination {
+    top: 218px;
+    right: 18px;
+    width: 175px;
+    min-width: 0;
+    padding: 13px 14px;
+    transform: translateY(-50%);
+}
+
+.destination-pin {
+    width: 18px;
+    height: 18px;
+    flex: 0 0 18px;
+    margin-right: 4px;
+}
+
+.destination div {
+    min-width: 0;
+}
+
+.destination strong {
+    font-size: 0.95rem;
+}
+
+.destination small {
+    font-size: 0.76rem;
+    white-space: nowrap;
+}
